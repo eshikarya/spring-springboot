@@ -1,0 +1,12 @@
+package com.example.componentscan;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+    static void main() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("componentScan.xml");
+        Employee employee = context.getBean("employee", Employee.class);
+        System.out.println(employee);
+    }
+}
